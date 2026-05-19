@@ -11,7 +11,7 @@ function ClientPortal() {
             Portal do Cliente
           </p>
           <h2 className="mt-3 max-w-3xl text-3xl font-extrabold leading-tight text-[#181f2a] md:text-5xl">
-            Solicite sua cotação direto pelo portal.
+            Solicite sua cotação pelo portal VLPRICE.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-[#5b6472] md:text-lg">
             Clientes podem acessar uma área dedicada para enviar solicitações de cotação com mais organização, sem depender do atendimento via WhatsApp.
@@ -39,7 +39,7 @@ function ClientPortal() {
               Entrar no Portal do Cliente
             </h3>
             <p className="mt-3 leading-7 text-slate-300">
-              Acesse o ambiente do <a href="vlprice.com">VLPRICE</a> para abrir uma nova solicitação de cotação.
+              Acesse o ambiente do <a href="https://vlprice.com" target="_blank" rel="noreferrer">VLPRICE</a> para abrir uma nova solicitação de cotação.
             </p>
             <a
               href={contact.portalUrl}
