@@ -30,7 +30,7 @@ function LocationMap() {
               <div className="mt-8 grid gap-4">
                 <Info icon={MapPin} label="Endereço" value={contact.address} />
                 <Info icon={Clock3} label="Horário" value={contact.hours} />
-                <Info icon={Phone} label="Telefone" value={contact.phones[0]} />
+                <Info icon={Phone} label="Telefone" value={contact.phones[2]} />
               </div>
 
               <a

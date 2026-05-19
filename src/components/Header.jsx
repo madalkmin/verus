@@ -52,7 +52,7 @@ function Header() {
             className="hidden items-center gap-2 whitespace-nowrap rounded-lg px-2 py-2 text-sm font-bold !text-slate-100 transition hover:!text-orange-200 min-[1850px]:flex"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            (19) 3442.6116
+            {contact.phones[0]}
           </a>
           <a
             href={contact.whatsappUrl}

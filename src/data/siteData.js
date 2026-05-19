@@ -43,7 +43,7 @@ export const navLinks = [
 ]
 
 export const contact = {
-  phones: ['(19) 3442.6116', '(19) 3442.6123', '(19) 3442.6303'],
+  phones: ['(19) 3442-6116', '(19) 3442-6123', '(19) 3442-6303'],
   email: 'contato@verustransportes.com.br',
   address:
     'Estrada Dr. Cassio de Freitas Levy, 2090, Jd. São Francisco, Limeira-SP - CEP: 13.484-720',
