@@ -6,6 +6,8 @@ function ButtonLink({ href, children, variant = 'primary', icon: Icon = ArrowRig
       'bg-[#e85d1c] text-white shadow-xl shadow-orange-950/20 hover:bg-[#c84c13] focus-visible:outline-[#e85d1c]',
     secondary:
       'border border-white/20 bg-white/10 text-white backdrop-blur hover:border-orange-300/80 hover:bg-white/15 focus-visible:outline-orange-300',
+    whatsapp:
+      'border border-[#25d366]/30 bg-[#25d366]/10 text-[#25d366] backdrop-blur hover:border-[#25d366]/70 hover:bg-[#25d366]/20 focus-visible:outline-[#25d366]',
     dark:
       'bg-[#18202c] text-white shadow-xl shadow-slate-950/20 hover:bg-[#243044] focus-visible:outline-[#18202c]',
     light:

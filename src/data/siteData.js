@@ -29,6 +29,7 @@ import {
   Warehouse,
   Zap,
 } from 'lucide-react'
+import { WhatsAppIcon } from '../components/BrandIcon'
 
 export const navLinks = [
   { label: 'Início', href: '#inicio' },
@@ -183,7 +184,7 @@ export const testimonials = [
 
 export const quickLinks = [
   { label: 'Ligar', href: contact.phoneUrl, icon: Phone },
-  { label: 'WhatsApp', href: contact.whatsappUrl, icon: MessageCircle },
+  { label: 'WhatsApp', href: contact.whatsappUrl, icon: WhatsAppIcon },
   { label: 'Abrir rota', href: contact.mapsUrl, icon: Navigation },
   { label: 'Enviar e-mail', href: contact.emailUrl, icon: Mail },
 ]

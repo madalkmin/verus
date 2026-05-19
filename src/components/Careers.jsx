@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { BriefcaseBusiness, CheckCircle2, Upload, X } from 'lucide-react'
 import { contact } from '../data/siteData'
+import { WhatsAppIcon } from './BrandIcon'
 
 const initialCareerForm = {
   name: '',
@@ -154,9 +155,10 @@ function Careers() {
               )}
               <button
                 type="submit"
-                className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-[#e85d1c] px-6 text-sm font-extrabold uppercase tracking-[0.12em] text-white shadow-xl shadow-orange-950/15 transition hover:bg-[#c84c13] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e85d1c]"
+                className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#25d366] px-6 text-sm font-extrabold uppercase tracking-[0.12em] text-white shadow-xl shadow-[#075e54]/20 transition hover:bg-[#20bd5a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25d366]"
               >
                 Enviar currículo
+                <WhatsAppIcon className="h-4 w-4" />
               </button>
             </motion.form>
           </motion.div>

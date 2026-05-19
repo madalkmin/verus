@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Menu, MessageCircle, Phone, X } from 'lucide-react'
+import { Menu, Phone, X } from 'lucide-react'
 import { contact, navLinks, socialLinks } from '../data/siteData'
 import { socialBrandClasses } from '../data/socialBrandClasses'
-import BrandIcon from './BrandIcon'
+import BrandIcon, { WhatsAppIcon } from './BrandIcon'
 import Logo from './Logo'
 
 function Header() {
@@ -56,10 +56,10 @@ function Header() {
           </a>
           <a
             href={contact.whatsappUrl}
-            className="grid h-11 w-11 place-items-center rounded-lg border border-white/15 !text-slate-100 transition hover:border-emerald-300 hover:bg-white/[0.08] hover:!text-white"
+            className="grid h-11 w-11 place-items-center rounded-lg border border-[#25d366]/25 bg-[#25d366]/10 text-[#25d366] transition hover:border-[#25d366]/70 hover:bg-[#25d366]/20 hover:shadow-lg hover:shadow-[#25d366]/20"
             aria-label="Chamar no WhatsApp"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
           </a>
           <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] p-1.5 shadow-xl shadow-slate-950/15">
             {socialLinks.map((social) => (
@@ -107,10 +107,10 @@ function Header() {
           <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-center">
             <a
               href={contact.whatsappUrl}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.08] px-5 text-sm font-extrabold uppercase tracking-[0.1em] !text-white transition hover:bg-white/[0.12]"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-[#25d366]/25 bg-[#25d366]/10 px-5 text-sm font-extrabold uppercase tracking-[0.1em] text-[#25d366] transition hover:border-[#25d366]/70 hover:bg-[#25d366]/20"
             >
               WhatsApp
-              <MessageCircle className="h-4 w-4" />
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
             <div className="flex justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] p-1.5">
               {socialLinks.map((social) => (

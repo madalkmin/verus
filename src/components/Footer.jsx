@@ -1,7 +1,7 @@
-import { Mail, MessageCircle, Phone } from 'lucide-react'
+import { Mail, Phone } from 'lucide-react'
 import { contact, footerServices, navLinks, socialLinks } from '../data/siteData'
 import { socialBrandClasses } from '../data/socialBrandClasses'
-import BrandIcon from './BrandIcon'
+import BrandIcon, { WhatsAppIcon } from './BrandIcon'
 import Logo from './Logo'
 
 function Footer() {
@@ -29,8 +29,8 @@ function Footer() {
                 <BrandIcon name={social.icon} colored />
               </a>
             ))}
-            <a className="grid h-10 w-10 place-items-center rounded-lg border border-emerald-400/25 bg-emerald-400/10 text-emerald-400 transition hover:border-emerald-400/70 hover:bg-emerald-400/20 hover:text-emerald-300" href={contact.whatsappUrl} aria-label="WhatsApp">
-              <MessageCircle className="h-5 w-5" />
+            <a className={`grid h-10 w-10 place-items-center rounded-lg border transition ${socialBrandClasses.whatsapp}`} href={contact.whatsappUrl} aria-label="WhatsApp">
+              <WhatsAppIcon className="h-5 w-5" />
             </a>
             <a className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-orange-300 hover:text-orange-200" href={contact.emailUrl} aria-label="E-mail">
               <Mail className="h-5 w-5" />

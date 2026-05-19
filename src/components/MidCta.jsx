@@ -1,5 +1,5 @@
-import { MessageCircle } from 'lucide-react'
 import { contact } from '../data/siteData'
+import { WhatsAppIcon } from './BrandIcon'
 import ButtonLink from './ButtonLink'
 
 function MidCta() {
@@ -17,7 +17,11 @@ function MidCta() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
             <ButtonLink href="#contato">Solicitar cotação</ButtonLink>
-            <ButtonLink href={contact.whatsappUrl} variant="secondary" icon={MessageCircle}>
+            <ButtonLink
+              href={contact.whatsappUrl}
+              variant="whatsapp"
+              icon={WhatsAppIcon}
+            >
               Chamar no WhatsApp
             </ButtonLink>
           </div>

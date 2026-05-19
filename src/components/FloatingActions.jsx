@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { ArrowUp, MessageCircle } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
 import { contact } from '../data/siteData'
+import { WhatsAppIcon } from './BrandIcon'
 
 function FloatingActions() {
   const [visible, setVisible] = useState(false)
@@ -16,10 +17,10 @@ function FloatingActions() {
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
       <a
         href={contact.whatsappUrl}
-        className="grid h-14 w-14 place-items-center rounded-full bg-emerald-500 !text-white shadow-2xl shadow-emerald-950/30 ring-2 ring-white/70 transition hover:scale-105 hover:bg-emerald-400"
+        className="grid h-14 w-14 place-items-center rounded-full bg-[#25d366] text-white shadow-2xl shadow-[#075e54]/30 ring-2 ring-white/70 transition hover:scale-105 hover:bg-[#20bd5a]"
         aria-label="Chamar no WhatsApp"
       >
-        <MessageCircle className="h-7 w-7 !text-white" strokeWidth={2.6} />
+        <WhatsAppIcon className="h-7 w-7" />
       </a>
       <a
         href="#inicio"

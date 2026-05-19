@@ -133,7 +133,11 @@ function Contact() {
                   <a
                     key={label}
                     href={href}
-                    className="flex items-center justify-center gap-2 rounded-lg border border-white/[0.12] bg-white/[0.08] px-4 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:border-orange-300 hover:bg-white/[0.12]"
+                    className={`flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm font-extrabold uppercase tracking-[0.12em] transition ${
+                      label === 'WhatsApp'
+                        ? socialBrandClasses.whatsapp
+                        : 'border-white/[0.12] bg-white/[0.08] text-white hover:border-orange-300 hover:bg-white/[0.12]'
+                    }`}
                   >
                     <Icon className="h-4 w-4" />
                     {label}
