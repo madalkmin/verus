@@ -1,5 +1,6 @@
-import { Mail, MessageCircle, Phone, Share2 } from 'lucide-react'
-import { contact, footerServices, navLinks } from '../data/siteData'
+import { Mail, MessageCircle, Phone } from 'lucide-react'
+import { contact, footerServices, navLinks, socialLinks } from '../data/siteData'
+import BrandIcon from './BrandIcon'
 import Logo from './Logo'
 
 function Footer() {
@@ -11,15 +12,27 @@ function Footer() {
           <p className="mt-6 max-w-sm leading-7 text-slate-400">
             Transporte rodoviário de cargas, armazenagem e soluções logísticas para empresas que precisam de performance e segurança.
           </p>
-          <div className="mt-6 flex gap-3">
+          <p className="mt-7 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-500">
+            Redes sociais oficiais
+          </p>
+          <div className="mt-3 flex gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-orange-300 hover:bg-white/[0.06] hover:text-orange-200"
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.label}
+              >
+                <BrandIcon name={social.icon} />
+              </a>
+            ))}
             <a className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-orange-300 hover:text-orange-200" href={contact.whatsappUrl} aria-label="WhatsApp">
               <MessageCircle className="h-5 w-5" />
             </a>
             <a className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-orange-300 hover:text-orange-200" href={contact.emailUrl} aria-label="E-mail">
               <Mail className="h-5 w-5" />
-            </a>
-            <a className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-orange-300 hover:text-orange-200" href="#" aria-label="LinkedIn">
-              <Share2 className="h-5 w-5" />
             </a>
           </div>
         </div>

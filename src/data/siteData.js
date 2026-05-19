@@ -188,6 +188,24 @@ export const quickLinks = [
   { label: 'Enviar e-mail', href: contact.emailUrl, icon: Mail },
 ]
 
+export const socialLinks = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/verus.transportes/',
+    icon: 'facebook',
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/verus.transportes/',
+    icon: 'instagram',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/verus-transportes',
+    icon: 'linkedin',
+  },
+]
+
 export const footerServices = services.map((service) => service.title)
 
 export const ArrowIcon = ArrowRight

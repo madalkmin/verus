@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Check, CheckCircle2, ChevronDown, Clock3, Mail, MapPin, Phone } from 'lucide-react'
-import { contact, quickLinks } from '../data/siteData'
+import { contact, quickLinks, socialLinks } from '../data/siteData'
+import BrandIcon from './BrandIcon'
 import SectionHeading from './SectionHeading'
 
 const initialForm = {
@@ -137,6 +138,25 @@ function Contact() {
                     {label}
                   </a>
                 ))}
+              </div>
+              <div className="mt-8 rounded-xl border border-white/[0.12] bg-white/[0.06] p-5">
+                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-orange-200">
+                  Redes sociais oficiais
+                </p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/[0.12] bg-[#0d131c]/70 px-3 text-sm font-extrabold text-white transition hover:border-orange-300 hover:bg-white/[0.1] hover:text-orange-100"
+                    >
+                      <BrandIcon name={social.icon} className="h-4 w-4" />
+                      {social.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
