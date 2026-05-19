@@ -52,7 +52,7 @@ function ClientPortal() {
             </a>
             <div className="mt-5 flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.06] p-4 text-sm font-semibold text-slate-300">
               <MousePointerClick className="h-5 w-5 shrink-0 text-orange-200" />
-              O link abre em uma nova aba para manter o site da Verus disponível.
+              Caso não tenha uma conta, basta criar uma.
             </div>
           </div>
         </div>
