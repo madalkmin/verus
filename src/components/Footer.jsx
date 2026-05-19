@@ -46,7 +46,7 @@ function Footer() {
           <div className="mt-5 grid gap-3 text-slate-400">
             <a href={contact.phoneUrl} className="flex gap-2 transition hover:text-orange-200">
               <Phone className="mt-1 h-4 w-4 shrink-0" />
-              {contact.phones[0]}
+              {contact.phones[2]}
             </a>
             <a href={contact.emailUrl} className="flex gap-2 transition hover:text-orange-200">
               <Mail className="mt-1 h-4 w-4 shrink-0" />
