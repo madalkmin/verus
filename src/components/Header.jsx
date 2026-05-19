@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu, MessageCircle, Phone, X } from 'lucide-react'
-import { contact, navLinks } from '../data/siteData'
+import { contact, navLinks, socialLinks } from '../data/siteData'
+import BrandIcon from './BrandIcon'
 import Logo from './Logo'
 
 function Header() {
@@ -29,7 +30,10 @@ function Header() {
           <Logo light />
         </div>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1.5 min-[1500px]:flex" aria-label="Menu principal">
+        <nav
+          className="hidden min-w-0 flex-1 items-center justify-center gap-1.5 min-[1500px]:flex"
+          aria-label="Menu principal"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -56,12 +60,20 @@ function Header() {
           >
             <MessageCircle className="h-5 w-5" />
           </a>
-          <a
-            href="#contato"
-            className="inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-[#e85d1c] px-5 text-sm font-extrabold uppercase tracking-[0.1em] !text-white shadow-xl shadow-orange-950/20 transition hover:bg-[#c84c13] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e85d1c]"
-          >
-            Solicitar cotação
-          </a>
+          <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] p-1.5 shadow-xl shadow-slate-950/15">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-[#151d2a] !text-slate-100 transition hover:-translate-y-0.5 hover:border-orange-300 hover:bg-[#e85d1c] hover:!text-white hover:shadow-lg hover:shadow-orange-950/25"
+                aria-label={social.label}
+              >
+                <BrandIcon name={social.icon} className="h-[18px] w-[18px] transition group-hover:scale-110" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <button
@@ -91,14 +103,7 @@ function Header() {
               {link.label}
             </a>
           ))}
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <a
-              href="#contato"
-              onClick={closeMenu}
-              className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#e85d1c] px-5 text-sm font-extrabold uppercase tracking-[0.1em] !text-white transition hover:bg-[#c84c13]"
-            >
-              Solicitar cotação
-            </a>
+          <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-center">
             <a
               href={contact.whatsappUrl}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.08] px-5 text-sm font-extrabold uppercase tracking-[0.1em] !text-white transition hover:bg-white/[0.12]"
@@ -106,6 +111,21 @@ function Header() {
               WhatsApp
               <MessageCircle className="h-4 w-4" />
             </a>
+            <div className="flex justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] p-1.5">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 bg-[#151d2a] !text-slate-100 transition hover:border-orange-300 hover:bg-[#e85d1c] hover:!text-white"
+                  aria-label={social.label}
+                  onClick={closeMenu}
+                >
+                  <BrandIcon name={social.icon} className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
           <p className="mt-4 text-sm font-semibold text-slate-400">
             {contact.email} · {contact.phones[0]}
