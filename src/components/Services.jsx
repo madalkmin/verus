@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import armazemImg from '../../img/armazem.jpg'
 import caminhaoImg from '../../img/caminhao.jpeg'
-import caminhaoViraImg from '../../img/caminhaoVira.jpeg'
+import empilhadeiraImg from '../../img/empilhadeira.png'
 import SectionHeading from './SectionHeading'
 
 function Services() {
@@ -41,7 +41,7 @@ function Services() {
                 className="min-h-[170px]"
               />
               <ImagePanel
-                src={caminhaoViraImg}
+                src={empilhadeiraImg}
                 title="Operação sob medida"
                 text="Atendimento próximo do planejamento à entrega."
                 className="min-h-[170px]"
