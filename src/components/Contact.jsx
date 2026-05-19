@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Check, CheckCircle2, ChevronDown, Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import { contact, quickLinks, socialLinks } from '../data/siteData'
+import { socialBrandClasses } from '../data/socialBrandClasses'
 import BrandIcon from './BrandIcon'
 import SectionHeading from './SectionHeading'
 
@@ -150,9 +151,9 @@ function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/[0.12] bg-[#0d131c]/70 px-3 text-sm font-extrabold text-white transition hover:border-orange-300 hover:bg-white/[0.1] hover:text-orange-100"
+                      className={`flex min-h-12 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-extrabold transition hover:shadow-lg ${socialBrandClasses[social.icon]}`}
                     >
-                      <BrandIcon name={social.icon} className="h-4 w-4" />
+                      <BrandIcon name={social.icon} colored className="h-4 w-4" />
                       {social.label}
                     </a>
                   ))}

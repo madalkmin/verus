@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu, MessageCircle, Phone, X } from 'lucide-react'
 import { contact, navLinks, socialLinks } from '../data/siteData'
+import { socialBrandClasses } from '../data/socialBrandClasses'
 import BrandIcon from './BrandIcon'
 import Logo from './Logo'
 
@@ -67,10 +68,10 @@ function Header() {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-[#151d2a] !text-slate-100 transition hover:-translate-y-0.5 hover:border-orange-300 hover:bg-[#e85d1c] hover:!text-white hover:shadow-lg hover:shadow-orange-950/25"
+                className={`group grid h-10 w-10 place-items-center rounded-lg border transition hover:-translate-y-0.5 hover:shadow-lg ${socialBrandClasses[social.icon]}`}
                 aria-label={social.label}
               >
-                <BrandIcon name={social.icon} className="h-[18px] w-[18px] transition group-hover:scale-110" />
+                <BrandIcon name={social.icon} colored className="h-[18px] w-[18px] transition group-hover:scale-110" />
               </a>
             ))}
           </div>
@@ -118,11 +119,11 @@ function Header() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 bg-[#151d2a] !text-slate-100 transition hover:border-orange-300 hover:bg-[#e85d1c] hover:!text-white"
+                  className={`grid h-11 w-11 place-items-center rounded-lg border transition ${socialBrandClasses[social.icon]}`}
                   aria-label={social.label}
                   onClick={closeMenu}
                 >
-                  <BrandIcon name={social.icon} className="h-5 w-5" />
+                  <BrandIcon name={social.icon} colored className="h-5 w-5" />
                 </a>
               ))}
             </div>
