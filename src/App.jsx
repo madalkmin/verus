@@ -1,5 +1,6 @@
 import About from './components/About'
 import Careers from './components/Careers'
+import ClientsCarousel from './components/ClientsCarousel'
 import ClientPortal from './components/ClientPortal'
 import Contact from './components/Contact'
 import Differentials from './components/Differentials'
@@ -31,6 +32,7 @@ function App() {
         <ProcessTimeline />
         <MidCta />
         <ClientPortal />
+        <ClientsCarousel />
         <Testimonials />
         <LocationMap />
         <Contact />
