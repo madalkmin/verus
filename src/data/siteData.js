@@ -5,9 +5,9 @@ import {
   BriefcaseBusiness,
   Building2,
   Clock3,
+  ClipboardCheck,
   Factory,
   Forklift,
-  Handshake,
   Headset,
   HeartHandshake,
   Mail,
@@ -37,6 +37,7 @@ export const navLinks = [
   { label: 'Serviços', href: '#servicos' },
   // { label: 'Estrutura', href: '#estrutura' },
   { label: 'Diferenciais', href: '#diferenciais' },
+  { label: 'Portal', href: '#portal-cliente' },
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Localização', href: '#localizacao' },
   { label: 'Contato', href: '#contato' },
@@ -53,7 +54,14 @@ export const contact = {
     'https://www.google.com/maps/search/?api=1&query=Estrada%20Dr.%20Cassio%20de%20Freitas%20Levy%202090%20Limeira%20SP',
   emailUrl: 'mailto:contato@verustransportes.com.br',
   phoneUrl: 'tel:+551934426116',
+  portalUrl: 'https://vlprice.com/login-PortalCliente',
 }
+
+export const clientPortalFeatures = [
+  { title: 'Solicitação direta de cotação', icon: ClipboardCheck },
+  { title: 'Acesso dedicado para clientes', icon: Users },
+  { title: 'Acompanhamento mais organizado', icon: Radar },
+]
 
 export const heroMetrics = [
   { value: '15+', label: 'anos de experiência', icon: BadgeCheck },
@@ -138,7 +146,7 @@ export const services = [
 export const differentials = [
   { title: 'Localização estratégica em Limeira-SP', icon: MapPin },
   { title: 'Equipe treinada e atualizada', icon: Users },
-  { title: 'Atendimento próximo do cliente', icon: Handshake },
+  { title: 'Excelência de ponta a ponta', icon: BadgeCheck },
   { title: 'Operações com responsabilidade', icon: ShieldCheck },
   { title: 'Estrutura para transporte e armazenagem', icon: Warehouse },
   { title: 'Foco em segurança e pontualidade', icon: Clock3 },

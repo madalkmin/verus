@@ -44,7 +44,7 @@ function Hero() {
             Transporte rodoviário, armazenagem e soluções logísticas com segurança, pontualidade e estrutura preparada para empresas que exigem performance.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="#contato" className="w-full sm:w-auto">Solicitar cotação</ButtonLink>
+            <ButtonLink href="#portal-cliente" className="w-full sm:w-auto">Solicitar cotação</ButtonLink>
             {/* <ButtonLink href="#estrutura" variant="secondary" icon={ArrowDown} className="w-full sm:w-auto">
               Conhecer estrutura
             </ButtonLink> */}

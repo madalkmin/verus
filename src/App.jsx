@@ -1,5 +1,6 @@
 import About from './components/About'
 import Careers from './components/Careers'
+import ClientPortal from './components/ClientPortal'
 import Contact from './components/Contact'
 import Differentials from './components/Differentials'
 import FloatingActions from './components/FloatingActions'
@@ -29,6 +30,7 @@ function App() {
         {/* <StructureGallery /> */}
         <ProcessTimeline />
         <MidCta />
+        <ClientPortal />
         <Testimonials />
         <LocationMap />
         <Contact />

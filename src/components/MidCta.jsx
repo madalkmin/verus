@@ -16,7 +16,7 @@ function MidCta() {
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-            <ButtonLink href="#contato">Solicitar cotação</ButtonLink>
+            <ButtonLink href="#portal-cliente">Solicitar cotação</ButtonLink>
             <ButtonLink
               href={contact.whatsappUrl}
               variant="whatsapp"
