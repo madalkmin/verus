@@ -3,9 +3,11 @@ import { contact } from '../data/siteData'
 
 const mapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
 const mapQuery = encodeURIComponent(contact.address)
-const mapEmbedUrl = mapsApiKey
+const apiMapEmbedUrl = mapsApiKey
   ? `https://www.google.com/maps/embed/v1/place?key=${mapsApiKey}&q=${mapQuery}&zoom=15`
   : ''
+const publicMapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&output=embed&z=15`
+const mapEmbedUrl = apiMapEmbedUrl || publicMapEmbedUrl
 
 function LocationMap() {
   return (
@@ -44,26 +46,14 @@ function LocationMap() {
           </div>
 
           <div className="min-h-[420px] bg-[#dfe5dd] lg:min-h-[520px]">
-            {mapEmbedUrl ? (
-              <iframe
-                title="Mapa da localização da Verus Transportes"
-                src={mapEmbedUrl}
-                className="h-full min-h-[420px] w-full border-0 lg:min-h-[520px]"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            ) : (
-              <div className="grid h-full min-h-[420px] place-items-center bg-[linear-gradient(135deg,#eef3ec,#dfe8dc)] p-8 text-center lg:min-h-[520px]">
-                <div className="max-w-md">
-                  <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#e85d1c]/12 text-[#d85a1c]">
-                    <MapPin className="h-7 w-7" />
-                  </span>
-                  <p className="mt-5 text-xl font-extrabold text-[#181f2a]">Mapa da localização</p>
-                  <p className="mt-3 leading-7 text-[#5b6472]">{contact.address}</p>
-                </div>
-              </div>
-            )}
+            <iframe
+              title="Mapa da localização da Verus Transportes"
+              src={mapEmbedUrl}
+              className="h-full min-h-[420px] w-full border-0 lg:min-h-[520px]"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>
