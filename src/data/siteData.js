@@ -38,6 +38,7 @@ export const navLinks = [
   // { label: 'Estrutura', href: '#estrutura' },
   { label: 'Diferenciais', href: '#diferenciais' },
   { label: 'Depoimentos', href: '#depoimentos' },
+  { label: 'Localização', href: '#localizacao' },
   { label: 'Contato', href: '#contato' },
 ]
 
