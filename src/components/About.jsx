@@ -17,12 +17,12 @@ function About() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_20%,rgba(232,93,28,.28),transparent_18rem),radial-gradient(circle_at_86%_80%,rgba(20,184,166,.14),transparent_16rem),linear-gradient(145deg,rgba(24,34,48,.98),rgba(10,15,24,.94))]" />
           <div className="route-grid absolute inset-0 opacity-30" />
           <div className="relative flex h-full min-h-[470px] flex-col justify-between">
-            <div className="max-w-sm rounded-2xl border border-white/12 bg-white/10 p-5 backdrop-blur">
+            <div className="w-full rounded-2xl border border-white/12 bg-white/10 p-5 backdrop-blur">
               <MapPin className="mb-5 h-8 w-8 text-orange-300" />
               <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-orange-100">
                 Limeira-SP
               </p>
-              <h3 className="mt-3 text-3xl font-extrabold leading-tight">Base preparada para o eixo empresarial paulista</h3>
+              <h3 className="mt-3 max-w-xl text-3xl font-extrabold leading-tight">Base preparada para o eixo empresarial paulista</h3>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="rounded-xl border border-white/10 bg-black/25 p-5">

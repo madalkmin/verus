@@ -61,7 +61,7 @@ function Header() {
           >
             <WhatsAppIcon className="h-5 w-5" />
           </a>
-          <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] p-1.5 shadow-xl shadow-slate-950/15">
+          <div className="flex items-center gap-2">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
@@ -112,7 +112,7 @@ function Header() {
               WhatsApp
               <WhatsAppIcon className="h-4 w-4" />
             </a>
-            <div className="flex justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] p-1.5">
+            <div className="flex justify-center gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
