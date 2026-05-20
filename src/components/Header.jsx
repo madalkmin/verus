@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Menu, Phone, X } from 'lucide-react'
+import { LockKeyhole, Menu, Phone, X } from 'lucide-react'
 import { contact, navLinks, socialLinks } from '../data/siteData'
 import { socialBrandClasses } from '../data/socialBrandClasses'
 import BrandIcon, { WhatsAppIcon } from './BrandIcon'
 import Logo from './Logo'
+import SocialCubeButton from './SocialCubeButton'
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -17,6 +18,7 @@ function Header() {
   }, [])
 
   const closeMenu = () => setIsOpen(false)
+  const employeePortalUrl = `${import.meta.env.BASE_URL}portal-colaborador`
 
   return (
     <header
@@ -48,33 +50,20 @@ function Header() {
 
         <div className="hidden shrink-0 items-center gap-3 lg:flex">
           <a
+            href={employeePortalUrl}
+            className="hidden min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-orange-300/25 bg-white/[0.07] px-3.5 text-xs font-extrabold uppercase tracking-[0.1em] !text-orange-100 transition hover:-translate-y-0.5 hover:border-orange-300/60 hover:bg-orange-400/10 hover:!text-white hover:shadow-lg hover:shadow-orange-950/20 xl:inline-flex"
+          >
+            <LockKeyhole className="h-4 w-4" aria-hidden="true" />
+            Portal do colaborador
+          </a>
+          <a
             href={contact.phoneUrl}
             className="hidden items-center gap-2 whitespace-nowrap rounded-lg px-2 py-2 text-sm font-bold !text-slate-100 transition hover:!text-orange-200 min-[1850px]:flex"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {contact.phones[0]}
           </a>
-          <a
-            href={contact.whatsappUrl}
-            className="grid h-11 w-11 place-items-center rounded-lg border border-[#25d366]/25 bg-[#25d366]/10 text-[#25d366] transition hover:border-[#25d366]/70 hover:bg-[#25d366]/20 hover:shadow-lg hover:shadow-[#25d366]/20"
-            aria-label="Chamar no WhatsApp"
-          >
-            <WhatsAppIcon className="h-5 w-5" />
-          </a>
-          <div className="flex items-center gap-2">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className={`group grid h-10 w-10 place-items-center rounded-lg border transition hover:-translate-y-0.5 hover:shadow-lg ${socialBrandClasses[social.icon]}`}
-                aria-label={social.label}
-              >
-                <BrandIcon name={social.icon} colored className="h-[18px] w-[18px] transition group-hover:scale-110" />
-              </a>
-            ))}
-          </div>
+          <SocialCubeButton />
         </div>
 
         <button
@@ -105,6 +94,14 @@ function Header() {
             </a>
           ))}
           <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-center">
+            <a
+              href={employeePortalUrl}
+              onClick={closeMenu}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-orange-300/25 bg-orange-400/10 px-5 text-sm font-extrabold uppercase tracking-[0.1em] !text-orange-100 transition hover:border-orange-300/70 hover:bg-orange-400/15 hover:!text-white"
+            >
+              Portal do colaborador
+              <LockKeyhole className="h-4 w-4" aria-hidden="true" />
+            </a>
             <a
               href={contact.whatsappUrl}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-[#25d366]/25 bg-[#25d366]/10 px-5 text-sm font-extrabold uppercase tracking-[0.1em] text-[#25d366] transition hover:border-[#25d366]/70 hover:bg-[#25d366]/20"

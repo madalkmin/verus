@@ -14,7 +14,7 @@ function Footer() {
             Transporte rodoviário de cargas, armazenagem e soluções logísticas para empresas que precisam de performance e segurança.
           </p>
           <p className="mt-7 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-500">
-            Redes sociais oficiais
+            Redes sociais
           </p>
           <div className="mt-3 flex gap-3">
             {socialLinks.map((social) => (
@@ -58,7 +58,6 @@ function Footer() {
       </div>
       <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 px-4 pt-6 text-sm text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <p>© 2026 Verus Transportes. Todos os direitos reservados.</p>
-        <p>Protótipo institucional 2.0 para proposta comercial.</p>
       </div>
     </footer>
   )

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { MapPinned, Truck } from 'lucide-react'
-import { contact, heroMetrics } from '../data/siteData'
-import { WhatsAppIcon } from './BrandIcon'
+import { heroMetrics } from '../data/siteData'
 import ButtonLink from './ButtonLink'
 
 function Hero() {
@@ -69,16 +68,6 @@ function Hero() {
               ))}
             </div>
           </div>
-          <a
-            href={contact.whatsappUrl}
-            className="flex items-center justify-between rounded-2xl border border-[#25d366]/30 bg-[#25d366]/12 p-5 text-left text-[#ecfff4] backdrop-blur transition hover:border-[#25d366]/70 hover:bg-[#25d366]/20 hover:shadow-xl hover:shadow-[#25d366]/10"
-          >
-            <span>
-              <span className="block text-sm font-extrabold uppercase tracking-[0.16em] text-[#25d366]">Resposta rápida</span>
-              <span className="mt-1 block text-lg font-extrabold">Chamar especialista no WhatsApp</span>
-            </span>
-            <WhatsAppIcon className="h-7 w-7 text-[#25d366]" />
-          </a>
         </motion.div>
       </div>
     </section>
