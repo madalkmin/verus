@@ -18,7 +18,7 @@ function Header() {
   }, [])
 
   const closeMenu = () => setIsOpen(false)
-  const employeePortalUrl = `${import.meta.env.BASE_URL}portal-colaborador`
+  const employeePortalUrl = `${import.meta.env.BASE_URL}#/portal-colaborador`
 
   return (
     <header

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verus Transportes</title>
+    <script>
+      (function () {
+        var base = '/verus/';
+        var path = window.location.pathname;
+        var route = path.indexOf(base) === 0 ? path.slice(base.length) : path.replace(/^\/+/, '');
+        var target = base;
+
+        if (route) {
+          target += '#/' + route.replace(/^\/+/, '');
+        }
+
+        if (window.location.search) {
+          target += window.location.search;
+        }
+
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

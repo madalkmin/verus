@@ -69,7 +69,7 @@ const notifications = [
 function CollaboratorPortalDashboard() {
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const homeUrl = import.meta.env.BASE_URL
-  const loginUrl = `${import.meta.env.BASE_URL}portal-colaborador`
+  const loginUrl = `${import.meta.env.BASE_URL}#/portal-colaborador`
   const hasDemoAccess = window.localStorage.getItem('verusCollaboratorDemoAccess') === 'active'
   const unreadCount = notifications.filter((notification) => notification.unread).length
 

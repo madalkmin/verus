@@ -20,6 +20,14 @@ import EmployeePortalLogin from './components/EmployeePortalLogin'
 import Testimonials from './components/Testimonials'
 
 function getCurrentRoute() {
+  const hashRoute = window.location.hash.startsWith('#/')
+    ? window.location.hash.slice(1)
+    : ''
+
+  if (hashRoute) {
+    return hashRoute
+  }
+
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
   const path = window.location.pathname
 

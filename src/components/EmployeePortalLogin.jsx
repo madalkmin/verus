@@ -12,7 +12,7 @@ function EmployeePortalLogin() {
   const [message, setMessage] = useState('')
   const [credentials, setCredentials] = useState({ login: '', password: '' })
   const homeUrl = import.meta.env.BASE_URL
-  const dashboardUrl = `${import.meta.env.BASE_URL}portal-colaborador/dashboard`
+  const dashboardUrl = `${import.meta.env.BASE_URL}#/portal-colaborador/dashboard`
 
   const updateCredential = (event) => {
     const { name, value } = event.target
