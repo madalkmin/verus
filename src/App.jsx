@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import About from './components/About'
 import Careers from './components/Careers'
 import ClientsCarousel from './components/ClientsCarousel'
@@ -39,7 +40,19 @@ function getCurrentRoute() {
 }
 
 function App() {
-  const currentRoute = getCurrentRoute()
+  const [currentRoute, setCurrentRoute] = useState(getCurrentRoute)
+
+  useEffect(() => {
+    const syncRoute = () => setCurrentRoute(getCurrentRoute())
+
+    window.addEventListener('hashchange', syncRoute)
+    window.addEventListener('popstate', syncRoute)
+
+    return () => {
+      window.removeEventListener('hashchange', syncRoute)
+      window.removeEventListener('popstate', syncRoute)
+    }
+  }, [])
 
   if (currentRoute === '/portal-colaborador/dashboard') {
     return <CollaboratorPortalDashboard />
